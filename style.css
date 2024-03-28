@@ -1,0 +1,45 @@
+body {
+    background-color: rgb(189, 189, 189);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main {
+    border-radius: 1em;
+    padding: 1em;
+    background-color: rgb(255, 255, 255);
+}
+.day {
+    color: dimgray;
+    font-weight: bold;
+    font-size: 30px;
+    
+}
+main p {
+    color:rgb(100, 100, 100);
+}
+hr {
+    border: none;
+    background-color: rgb(192, 192, 192);
+    height: 0.3px; 
+}
+.choice_time img{
+    margin-left: auto;
+    padding-top: 10px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.choice_time input {
+    border: none;
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 50px;
+    cursor: pointer;
+}
+
+.choice_time {
+    display: flex;
+}
+
