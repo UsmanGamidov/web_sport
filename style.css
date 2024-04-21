@@ -85,8 +85,9 @@ html {
 }
 
 .new_set {
-    width: 170px;
-    border-bottom: 1px solid #6750A4
+  white-space: nowrap;
+  width: 170px;
+  border-bottom: 1px solid #6750A4
 }
 
 hr {
@@ -112,8 +113,7 @@ hr {
   }
   
 .show {
-    visibility: visible;
-    opacity: 1;
-    top: 20px;
-  } 
-
+  visibility: visible;
+  opacity: 1;
+  top: 20px;
+}
