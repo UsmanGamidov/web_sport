@@ -1,10 +1,25 @@
 let button = document.querySelector('.new_set_button');
 let hint = document.querySelector('.hint');
+let count = 0;
 
 button.addEventListener('click', function(event) {//При клике на кнопку
-  // hint.classList.add('show'); //Покажем блок
-  let clone = hint.cloneNode(true); // true указывает на клонирование со всем содержимым
-  hint.parentNode.appendChild(clone);
+  if (count === 0) {
+    count = 1;
+    hint.classList.add('show'); //Покажем блок
+  } else {
+    let clone = hint.cloneNode(true); // true указывает на клонирование со всем содержимым
+    hint.parentNode.appendChild(clone);
+  }
+});
+
+let button_close = document.querySelector('.close');
+
+button_close.addEventListener('click', function(event) {//При клике на кнопку
+  let clonedBlock = document.querySelector('.hint:not(#originalBlock)');
+  if (clonedBlock) {
+    clonedBlock.style.display = 'none'; // Скрываем клонированный блок
+    clonedBlock.parentNode.removeChild(clonedBlock); // Можно использовать эту строку для удаления блока из DOM
+  }
 });
 
 
