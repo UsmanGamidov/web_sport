@@ -53,7 +53,7 @@ html {
 
 .footer p {
     margin-left: 20px;
-    width: 100%;
+    width: 95%;
     top: 50%;
     left: 50%;
 }
@@ -65,7 +65,7 @@ html {
     font-size: 30px;
     border: none; 
     outline: none;
-    width: 100%;
+    width: 95%;
     height: 100%;
 }
 
@@ -85,8 +85,9 @@ html {
 }
 
 .new_set {
-    width: 170px;
-    border-bottom: 1px solid #6750A4
+  white-space: nowrap;
+  width: 170px;
+  border-bottom: 1px solid #6750A4
 }
 
 hr {
@@ -97,6 +98,7 @@ hr {
 }
    
 .hint {
+    margin: 10px;
     position: relative;
     display:grid;
     align-items: center;
@@ -112,8 +114,7 @@ hr {
   }
   
 .show {
-    visibility: visible;
-    opacity: 1;
-    top: 20px;
-  } 
-
+  visibility: visible;
+  opacity: 1;
+  top: 20px;
+}
