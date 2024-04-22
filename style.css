@@ -42,6 +42,7 @@
   
 * {
     font-family: Roboto;
+    font-size: 14px;
     margin: 0;
     padding: 0;
   }
@@ -60,13 +61,22 @@ html {
 
 .footer input {
     cursor: pointer;
-    margin: 10px;
     margin-left: 20px;
     font-size: 30px;
     border: none; 
     outline: none;
-    width: 95%;
-    height: 100%;
+    width: 90%;
+
+}
+
+.hiddenn input {
+  cursor: pointer;
+  font-size: 17px; 
+  border: none; 
+  outline: none;
+  width: 10%;
+  background-color: #FEF7FF;
+  font-weight: 500;
 }
 
 .target_selection {
@@ -99,30 +109,31 @@ hr {
 }
    
 .hint {
-    margin-bottom: 10px;
-    position: relative;
-    display:grid;
-    align-items: center;
-    justify-content: center;
-    height: 200px;
-    width: 100%;
-    animation: fadeIn 0.5s forw ards;
-    opacity: 0;
-    visibility: hidden;
-    border: 1px solid #000;
-    border-radius: 10px;
-    background-color: #FEF7FF;
-  }
+  margin-bottom: 10px;
+  position: relative;
+  display:grid;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  width: 100%;
+  animation: fadeIn 0.5s forw ards;
+  opacity: 0;
+  visibility: hidden;
+  border: 1px solid #000;
+  border-radius: 10px;
+  background-color: #FEF7FF;
+}
 
-  @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
   }
-  
+  to {
+      opacity: 1;
+  }
+}
+
 .show {
   visibility: visible;
   opacity: 1;

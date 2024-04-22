@@ -20,19 +20,16 @@
     
     <div class="footer">
         <p style="color: #6750A4; margin-bottom: 10px; margin-top: 10px;">новая тренировка</p>
-        <input name="name_tren" placeholder="Введите название тренировки"><br>
+        <input name="name_tren" placeholder="Введите название тренировки" style="width: 95%;"><br>
 
-        <div class="row align-items-start">
+        <div class="row align-items-start" style="width: 95%;">
             <div class="col">
-                <p style="display: inline; margin-top: 10px;">Цель:</p>
+                <p style="display: inline;">Цель:</p>
                 <!-- Кнопка-триггер модального окна цели -->
                 <button class="target_selection" id="target_selection_1" data-bs-toggle="modal" data-bs-target="#exampleModal">Выбрать</button>
             </div>
             <div class="col">
-                
-            </div>
-            <div class="col">
-                <p style="display: inline; margin-top: 10px;">Группа:</p>
+                <p style="display: inline;">Группа:</p>
                 <!-- Кнопка-триггер модального окна группы-->
                 <button class="target_selection" id="target_selection_2" data-bs-toggle="modal" data-bs-target="#exampleModal1">Выбрать</button>
             </div>
@@ -79,10 +76,7 @@
     <!-- --------------------------------------------------------------------- -->
 
     <div id="container" style="margin: 20px;">
-        <div class="new_set">
-            <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M12 7.25H6.75V12.5H5.25V7.25H0V5.75H5.25V0.5H6.75V5.75H12V7.25Z" fill="#6750A4"/></svg>
-            <button type="button" id="new_set_button_id" class="new_set_button" style="color: #6750A4;">Добавить новый сет</button>
-        </div>
+
         
         <!-- <div class="hint" id="hint">
             <div class="row row-nav">
@@ -108,8 +102,14 @@
                 fdsf
             </div>
         </div> -->
-    </div>
         
+    </div>
+    <div class="new_set" style="margin: 20px;">
+        <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M12 7.25H6.75V12.5H5.25V7.25H0V5.75H5.25V0.5H6.75V5.75H12V7.25Z" fill="#6750A4"/></svg>
+        <button type="button" id="new_set_button_id" class="new_set_button" style="color: #6750A4;">Добавить новый сет</button>
+    </div>
+
+  
         
     <script src="script.js"></script>
 </body>
