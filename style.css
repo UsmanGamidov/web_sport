@@ -91,6 +91,7 @@ html {
 }
 
 hr {
+    width: 100%;
     border: none; /* Убираем границу */
     background-color: #6750A4; /* Цвет линии */
     color: #6750A4; /* Цвет линии для IE6-7 */
@@ -98,19 +99,28 @@ hr {
 }
    
 .hint {
-    margin: 10px;
+    margin-bottom: 10px;
     position: relative;
     display:grid;
     align-items: center;
     justify-content: center;
     height: 200px;
     width: 100%;
-    transition: all ease 0.4s;
+    animation: fadeIn 0.5s forw ards;
     opacity: 0;
     visibility: hidden;
     border: 1px solid #000;
     border-radius: 10px;
     background-color: #FEF7FF;
+  }
+
+  @keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
   }
   
 .show {
@@ -118,3 +128,6 @@ hr {
   opacity: 1;
   top: 20px;
 }
+
+
+

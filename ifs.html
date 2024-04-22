@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Добавление блоков с кнопкой</title>
+<style>
+    .block {
+        width: 100px;
+        height: 100px;
+        background-color: lightblue;
+        margin: 10px;
+        position: relative;
+    }
+    .block button {
+        position: absolute;
+        bottom: 5px;
+        right: 5px;
+    }
+</style>
+</head>
+<body>
+
+<button onclick="addBlock()">Добавить блок</button>
+<div id="container"></div>
+
+<script>
+    let blockTemplate = document.createElement('div');
+    blockTemplate.className = 'block';
+    blockTemplate.innerHTML = `
+        <p>Блок</p>
+        <p>Блок</p>
+        <button onclick="removeBlock(this)">Удалить</button>
+        
+        
+    `;
+
+    function addBlock() {
+        const container = document.getElementById('container');
+        const newBlock = blockTemplate.cloneNode(true); // Создаем копию шаблона блока
+        container.appendChild(newBlock);
+    }
+
+    function removeBlock(button) {
+        const block = button.parentNode;
+        block.parentNode.removeChild(block);
+    }
+</script>
+
+</body>
+</html>
