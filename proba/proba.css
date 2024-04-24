@@ -1,0 +1,17 @@
+#drumContainer {
+    overflow-y: scroll;
+    height: 200px; /* Высота барабана */
+    width: 100px; /* Ширина барабана */
+    border: 1px solid #ccc;
+  }
+  
+  #drum {
+    padding: 10px;
+  }
+  
+  .number {
+    font-size: 20px; /* Размер шрифта чисел */
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+  }
+  
