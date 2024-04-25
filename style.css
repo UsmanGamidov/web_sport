@@ -65,7 +65,8 @@ hr {
   display:grid;
   align-items: center;
   justify-content: center;
-  height: 200px;
+  height: auto;
+  padding: 20px;
   width: 100%;
   animation: fadeIn 0.5s forw ards;
   opacity: 0;
@@ -88,7 +89,7 @@ hr {
 .show {
   visibility: visible;
   opacity: 1;
-  top: 20px;
+  top: 8px;
 }
 
 

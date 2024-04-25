@@ -4,13 +4,8 @@ let count = 0;
 let blockCount = 0;
 
 button.addEventListener('click', function(event) {//При клике на кнопку
-  // if (count === 0) {
-  //   count = 1;
-  //    //Покажем блок
-  // } else {
-  //   let clone = hint.cloneNode(true); // true указывает на клонирование со всем содержимым
-  //   hint.parentNode.appendChild(clone);
-  // }
+
+  
   blockCount++;
   const container = document.getElementById('container');
   const block = document.createElement('div');
@@ -49,40 +44,37 @@ button.addEventListener('click', function(event) {//При клике на кн�
           <path fill-rule="evenodd" clip-rule="evenodd" d="M11.3473 12.2704C11.7078 11.9099 12.2922 11.9099 12.6527 12.2704L16.345 15.9627C16.7055 16.3232 16.7055 16.9076 16.345 17.2681C15.9845 17.6286 15.4001 17.6286 15.0396 17.2681L12 14.2285L8.96041 17.2681C8.59992 17.6286 8.01546 17.6286 7.65498 17.2681C7.29449 16.9076 7.29449 16.3232 7.65498 15.9627L11.3473 12.2704Z" fill="#6750A4"/>
           <path fill-rule="evenodd" clip-rule="evenodd" d="M11.3473 5.80882C11.7078 5.44834 12.2922 5.44834 12.6527 5.80882L16.345 9.50113C16.7055 9.86162 16.7055 10.4461 16.345 10.8066C15.9845 11.167 15.4001 11.167 15.0396 10.8066L12 7.76697L8.96041 10.8066C8.59992 11.167 8.01546 11.167 7.65498 10.8066C7.29449 10.4461 7.29449 9.86162 7.65498 9.50113L11.3473 5.80882Z" fill="#6750A4"/>
           </svg>
-
-          <svg onclick="removeBlock(this)" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M15.9375 0V1.33333H22.5V4H21.1875V21.3333C21.1875 22.8 20.0063 24 18.5625 24H5.4375C3.99375 24 2.8125 22.8 2.8125 21.3333V4H1.5V1.33333H8.0625V0H15.9375ZM5.4375 21.3333H18.5625V4H5.4375V21.3333ZM8.0625 6.66667H10.6875V18.6667H8.0625V6.66667ZM15.9375 6.66667H13.3125V18.6667H15.9375V6.66667Z" fill="#6750A4"/>
-          </svg>
-
         </div>
       </div>
     </div>
   </div> 
 
+  <svg class="remove_svg" onclick="removeBlock(this)" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M15.9375 0V1.33333H22.5V4H21.1875V21.3333C21.1875 22.8 20.0063 24 18.5625 24H5.4375C3.99375 24 2.8125 22.8 2.8125 21.3333V4H1.5V1.33333H8.0625V0H15.9375ZM5.4375 21.3333H18.5625V4H5.4375V21.3333ZM8.0625 6.66667H10.6875V18.6667H8.0625V6.66667ZM15.9375 6.66667H13.3125V18.6667H15.9375V6.66667Z" fill="#6750A4"/>
+  </svg>
+
   <hr>
+
+  <div class="new_set" style="margin: 20px;">
+    <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M12 7.25H6.75V12.5H5.25V7.25H0V5.75H5.25V0.5H6.75V5.75H12V7.25Z" fill="#6750A4"/></svg>
+    <button type="button" id="new_exercise_button_id" class="new_exercise_button" style="color: #6750A4;">Добавить новый сет</button>
+  </div>
+
   <button onclick="removeBlock(this)">Удалить</button>
-  
+ 
   `;
   container.appendChild(block);
 });
-
-
 
 function removeBlock(button) {
   const block = button.parentNode;
   block.parentNode.removeChild(block);
 }
 
-// let button_close = document.querySelector('.close');
-
-// button_close.addEventListener('click', function(event) {//При клике на кнопку
-//   let clonedBlock = document.querySelector('.hint:not(#originalBlock)');
-//   if (clonedBlock) {
-//     clonedBlock.style.display = 'none'; // Скрываем клонированный блок
-//     clonedBlock.parentNode.removeChild(clonedBlock); // Можно использовать эту строку для удаления блока из DOM
-//   }
-// });
-
+let button_exercise = document.querySelector('.new_exercise_button');
+button_exercise.addEventListener('click', function(event) {//При клике на кнопку
+  
+});
 
 let select_grupp_1 = document.querySelector('.grupp1');
 let select_grupp_2 = document.querySelector('.grupp2');

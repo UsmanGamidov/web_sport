@@ -77,15 +77,57 @@
     </div>
 
     <!-- --------------------------------------------------------------------- -->
+    <div class="new_set" style="margin: 20px;">
+        <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M12 7.25H6.75V12.5H5.25V7.25H0V5.75H5.25V0.5H6.75V5.75H12V7.25Z" fill="#6750A4"/></svg>
+        <button type="button" id="new_set_button_id" class="new_set_button" style="color: #6750A4;">Добавить новый сет</button>
+    </div>
 
     <div id="container" style="margin: 20px;">
 
         
     </div>
-    <div class="new_set" style="margin: 20px;">
-        <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M12 7.25H6.75V12.5H5.25V7.25H0V5.75H5.25V0.5H6.75V5.75H12V7.25Z" fill="#6750A4"/></svg>
-        <button type="button" id="new_set_button_id" class="new_set_button" style="color: #6750A4;">Добавить новый сет</button>
-    </div>
+
+    <!-- <script>
+        var blockCount1 = 0;
+        document.getElementById('new_set_button_id').addEventListener('click', function() {
+            console.log("Click event fired!");
+            blockCount1++
+            // Создаем новый XMLHttpRequest объект
+            var xhr = new XMLHttpRequest();
+            
+            // Открываем запрос на загрузку другого HTML документа
+            xhr.open('GET', 'C:/Users/osman/OneDrive/Рабочий стол/vsc/sport/web_sport/ifs.html', true);
+            
+            // Устанавливаем обработчик события "onload", который будет выполнен, когда загрузится другой документ
+            xhr.onload = function() {
+              // Проверяем, что статус запроса успешный (200)
+              if (xhr.status >= 200 && xhr.status < 300) {
+                // Создаем временный div для вставки загруженного содержимого
+                var tempDiv = document.createElement('div');
+                tempDiv.innerHTML = xhr.responseText;
+            
+                // Находим блок в загруженном содержимом
+                var loadedBlock = tempDiv.querySelector('.hint');
+            
+                // Находим контейнер, куда будем вставлять загруженный блок
+                var blockContainer = document.getElementById('container');
+            
+                // Вставляем загруженный блок в контейнер
+                loadedBlock.classList.add('show');
+                loadedBlock.classList.add('show' + blockCount1);
+                blockContainer.appendChild(loadedBlock);
+              } else {
+                // Если возникла ошибка при загрузке, выводим сообщение об ошибке
+                console.error('Ошибка загрузки другого документа');
+              }
+            };
+        
+            // Отправляем запрос на загрузку другого документа
+            xhr.send();
+        });
+      </script> -->
+      
+
 
   
         
