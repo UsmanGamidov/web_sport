@@ -61,35 +61,11 @@ hr {
    
 .hint {
   margin-bottom: 10px;
-  position: relative;
-  display:grid;
-  align-items: center;
-  justify-content: center;
-  height: auto;
   padding: 20px;
-  width: 100%;
-  animation: fadeIn 0.5s forw ards;
-  opacity: 0;
-  visibility: hidden;
+  margin-right: 25px;
   border: 1px solid #000;
   border-radius: 10px;
   background-color: #FEF7FF;
-}
-
-
-@keyframes fadeIn {
-  from {
-      opacity: 0;
-  }
-  to {
-      opacity: 1;
-  }
-}
-
-.show {
-  visibility: visible;
-  opacity: 1;
-  top: 8px;
 }
 
 
@@ -97,13 +73,13 @@ hr {
 .up {
   background-color: #E8DEF8;
   border-radius: 20%;
-  width: auto ;
+  width: 30px ;
   height: auto ;
 }
 
 .povtor {
   background-color: #E8DEF8;
-  border-radius: 20%;
+  border-radius: 8px;
   width: auto;
   height: auto ;
 }
@@ -112,18 +88,31 @@ hr {
   margin-bottom: 2px;
 }
 
-.hiddenn input {
+.povtor input {
   cursor: pointer;
   font-size: 17px; 
   border: none; 
   outline: none;
   width: 25px;
-  border-radius: 20%;
+  border-radius: 8px;
   background-color: #E8DEF8;
   font-weight: 500;
 }
 
 
-.hiddenn {
-  width: 100%;
+.hidden {
+  display: none;
+}
+
+.hidden_set {
+  display: none;
+}
+
+.new_exercise {
+  color: #6750A4;
+  padding: 4px;
+  background-color: #E8DEF8;
+  width: auto;
+  border-radius: 8px;
+  border: none;
 }

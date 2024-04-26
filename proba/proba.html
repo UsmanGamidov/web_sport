@@ -1,20 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Добавление блока</title>
-  <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Передача блока в функцию</title>
+<script>
+    // Функция для копирования блока
+    function copyBlock(button) {
+        // Находим родительский блок кнопки
+        var parentBlock = button.parentNode;
+        
+        // Клонируем блок
+        var clonedBlock = parentBlock.cloneNode(true);
+        
+        // Добавляем клона куда-то на страницу (например, в конец body)
+        document.body.appendChild(clonedBlock);
+    }
+
+    // Функция для создания копии блока внутри другого блока
+    function copyBlockInside(button) {
+        // Находим родительский блок кнопки
+        var parentBlock = button.parentNode;
+        
+        // Находим блок, который нужно скопировать
+        var originalBlock = parentBlock.querySelector('.blockToCopy');
+        
+        // Клонируем блок
+        var clonedBlock = originalBlock.cloneNode(true);
+        
+        // Добавляем клона в родительский блок
+        parentBlock.appendChild(clonedBlock);
+    }
+</script>
 </head>
 <body>
-  <div id="container">
 
-    <div id="existingBlock" class="block">
-      yhrthfhgfhfghfg h fhfghfghf
-    </div>
-  </div>
-  <button id="addBlockBtn">Добавить блок</button>
+<!-- Оригинальный блок -->
+<div class="blockToCopy">
+    <p>Это оригинальный блок</p>
+    <!-- Кнопка для создания копии блока внутри этого же блока -->
+    <button onclick="copyBlockInside(this)">Создать копию внутри</button>
+</div>
 
-  <script src="proba.js"></script>
+<!-- Кнопка для создания копии оригинального блока -->
+<button onclick="copyBlock(this)">Создать копию</button>
+
 </body>
 </html>
