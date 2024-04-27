@@ -21,7 +21,7 @@ html {
 .footer input {
     cursor: pointer;
     margin-left: 20px;
-    font-size: 30px;
+    font-size: 20px;
     border: none; 
     outline: none;
     width: 90%;
@@ -31,40 +31,40 @@ html {
 
 
 .target_selection {
-    border: none;
-    background-color: white; 
-    color: black; 
-    margin-top: 20px;
-    color: #6750A4;
-    cursor: pointer;
+  border: none;
+  background-color: white; 
+  color: black; 
+  margin-top: 20px;
+  color: #6750A4;
+  cursor: pointer;
 }
 
 .new_set_button {
-    background-color: white;
-    border: none;
-    margin-left: 5px;
+  background-color: white;
+  border: none;
+  margin-left: 5px;
 }
 
 .new_set {
   white-space: nowrap;
-  width: 170px;
+  width: 150px;
   border-bottom: 1px solid #6750A4
 }
 
 hr {
-    width: 100%;
-    border: none; /* Убираем границу */
-    background-color: #6750A4; /* Цвет линии */
-    color: #6750A4; /* Цвет линии для IE6-7 */
-    height: 2px; /* Толщина линии */
+  width: 100%;
+  border: none; /* Убираем границу */
+  background-color: #6750A4; /* Цвет линии */
+  color: #6750A4; /* Цвет линии для IE6-7 */
+  height: 2px; /* Толщина линии */
 }
    
 .hint {
   margin-bottom: 10px;
   padding: 20px;
-  margin-right: 25px;
   border: 1px solid #000;
   border-radius: 10px;
+  width: 100%;
   background-color: #FEF7FF;
 }
 

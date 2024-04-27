@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <!-- <script src="https://telegram.org/js/telegram-web-app.js"></script> -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <title>Расписание</title>
@@ -33,36 +33,36 @@
         <!-- Модальное окно для цели-->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Цель тренировки:</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                <div class="modal-content" style="width: 80%;">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Цель тренировки:</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                    </div>
+                    <div class="modal-body">
+                        <button type="button" class="btn btn-primary cel1" style="display: block; margin: 10px; width: 95%; background-color: #FEF7FF; border-color: #6750A4; color: #6750A4" data-bs-dismiss="modal">Похудеть</button>
+                        <button type="button" class="btn btn-primary cel2" style="display: block; margin: 10px; width: 95%; background-color: #FEF7FF; border-color: #6750A4; color: #6750A4" data-bs-dismiss="modal">Не Похудеть</button>
+                        <button type="button" class="btn btn-primary cel3" style="display: block; margin: 10px; width: 95%; background-color: #FEF7FF; border-color: #6750A4; color: #6750A4" data-bs-dismiss="modal">Может Похудеть</button>
+                        <button type="button" class="btn btn-primary cel4" style="display: block; margin: 10px; width: 95%; background-color: #FEF7FF; border-color: #6750A4; color: #6750A4" data-bs-dismiss="modal">Пофиг</button>
+                    </div>
                 </div>
-                <div class="modal-body">
-                    <button type="button" class="btn btn-primary cel1" style="display: block; margin: 10px; width: 95%; background-color: #FEF7FF; border-color: #6750A4; color: #6750A4" data-bs-dismiss="modal">Похудеть</button>
-                    <button type="button" class="btn btn-primary cel2" style="display: block; margin: 10px; width: 95%; background-color: #FEF7FF; border-color: #6750A4; color: #6750A4" data-bs-dismiss="modal">Не Похудеть</button>
-                    <button type="button" class="btn btn-primary cel3" style="display: block; margin: 10px; width: 95%; background-color: #FEF7FF; border-color: #6750A4; color: #6750A4" data-bs-dismiss="modal">Может Похудеть</button>
-                    <button type="button" class="btn btn-primary cel4" style="display: block; margin: 10px; width: 95%; background-color: #FEF7FF; border-color: #6750A4; color: #6750A4" data-bs-dismiss="modal">Пофиг</button>
-                </div>
-            </div>
             </div>
         </div>
 
         <!-- Модальное окно для группы-->
         <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Группа тренировки:</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                <div class="modal-content" style="width: 80%;">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Группа тренировки:</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                    </div>
+                    <div class="modal-body">
+                        <button type="button" class="btn btn-primary grupp1" style="display: block; margin: 10px; width: 95%; background-color: #FEF7FF; border-color: #6750A4; color: #6750A4" data-bs-dismiss="modal">Ноги</button>
+                        <button type="button" class="btn btn-primary grupp2" style="display: block; margin: 10px; width: 95%; background-color: #FEF7FF; border-color: #6750A4; color: #6750A4" data-bs-dismiss="modal">Руки</button>
+                        <button type="button" class="btn btn-primary grupp3" style="display: block; margin: 10px; width: 95%; background-color: #FEF7FF; border-color: #6750A4; color: #6750A4" data-bs-dismiss="modal">Грудь</button>
+                        <button type="button" class="btn btn-primary grupp4" style="display: block; margin: 10px; width: 95%; background-color: #FEF7FF; border-color: #6750A4; color: #6750A4" data-bs-dismiss="modal">Спина</button>
+                    </div>
                 </div>
-                <div class="modal-body">
-                    <button type="button" class="btn btn-primary grupp1" style="display: block; margin: 10px; width: 95%; background-color: #FEF7FF; border-color: #6750A4; color: #6750A4" data-bs-dismiss="modal">Ноги</button>
-                    <button type="button" class="btn btn-primary grupp2" style="display: block; margin: 10px; width: 95%; background-color: #FEF7FF; border-color: #6750A4; color: #6750A4" data-bs-dismiss="modal">Руки</button>
-                    <button type="button" class="btn btn-primary grupp3" style="display: block; margin: 10px; width: 95%; background-color: #FEF7FF; border-color: #6750A4; color: #6750A4" data-bs-dismiss="modal">Грудь</button>
-                    <button type="button" class="btn btn-primary grupp4" style="display: block; margin: 10px; width: 95%; background-color: #FEF7FF; border-color: #6750A4; color: #6750A4" data-bs-dismiss="modal">Спина</button>
-                </div>
-            </div>
             </div>
         </div>
     </div>
@@ -70,10 +70,10 @@
     <!-- --------------------------------------------------------------------- -->
     <div class="new_set" style="margin: 20px;">
         <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M12 7.25H6.75V12.5H5.25V7.25H0V5.75H5.25V0.5H6.75V5.75H12V7.25Z" fill="#6750A4"/></svg>
-        <button onclick="cloneBlock()" type="button" id="new_set_button_id" class="new_set_button" style="color: #6750A4;">Добавить новый сет</button>
+        <button onclick="cloneBlock()" type="button" id="new_set_button_id" class="new_set_button" style="color: #6750A4; margin-bottom: 2px;">Добавить новый сет</button>
     </div>
 
-    <div id="container" class="container hidden" style="margin: 10px; ">
+    <div id="container" class="hidden" style="margin: 10px; ">
         <div class="hint">
             <div class="row">
                 <div class="col-6">
@@ -115,6 +115,11 @@
         
             <hr>
             
+            <div class="new_set" style="margin: 20px;">
+                <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M12 7.25H6.75V12.5H5.25V7.25H0V5.75H5.25V0.5H6.75V5.75H12V7.25Z" fill="#6750A4"/></svg>
+                <button onclick="clone_new_set(this)" type="button" class="new_exercise_button" style="color: #6750A4;">Добавить новый сет</button>
+            </div>
+
             <div class="container hidden_set" id="new_set">
                 <div class="row">
                     <div class="col-8">
@@ -130,10 +135,7 @@
             </div>
 
 
-            <div class="new_set" style="margin: 20px;">
-                <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M12 7.25H6.75V12.5H5.25V7.25H0V5.75H5.25V0.5H6.75V5.75H12V7.25Z" fill="#6750A4"/></svg>
-                <button onclick="clone_new_set(this)" type="button" class="new_exercise_button" style="color: #6750A4;">Добавить новый сет</button>
-            </div>
+
         
             <button onclick="removeBlock(this)">Удалить</button>
         </div> 

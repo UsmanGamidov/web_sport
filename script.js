@@ -18,45 +18,61 @@ function cloneBlock() {
 
   // Скрыть оригинальный блок после клонирования
   originalBlock.classList.add('hidden');
-
+  clonedBlock.classList.add('show');
   clonedBlock.classList.add('show' + blockCount);
 
-  clonedBlock.id = 'show' + blockCount;
-
   // Добавить клонированный блок после оригинала
-  originalBlock.parentNode.insertBefore(clonedBlock, originalBlock.nextSibling);
+  originalBlock.parentNode.appendChild(clonedBlock);
 }
 
 function removeBlock(button) {
   const block = button.parentNode;
   block.parentNode.removeChild(block);
+
+  for (let i = 0; i < blockCount; i++) {
+    console.log('Элемент:');
+    var divElement = document.querySelector('.show' + i);
+    
+    if (divElement && divElement.innerHTML.trim() === '') {
+      // Если блок div пустой, удаляем его
+      divElement.parentNode.removeChild(divElement);
+    }
+  }
 }
 
 // для добавление нового сета
-function clone_new_set(parentId)  {
-  block_set_count++;
-  // for(let i=0; i < 20; i++) {
-    let hintElement = parentId.closest(".show" + _.range(10));
+function clone_new_set(button) {
+  var container = button.closest('.show');
 
-    // if (hintElement === '[object HTMLDivElement]') {
-    //   break;  
-    // }
-  // }
+  if(container) {
+      // Получение всех классов блока container
+      var classes = container.classList;
+      // Преобразование классов в массив
+      var classesArray = Array.from(classes);
+      // Беру нужный класс
+      var classesArray_show = classesArray[1];
 
-  document.write(hintElement);
-  
-  // Находим родительский блок
-  var parentBlock = document.getElementById(parent_class);
+      // Найти скрытый блок, который нужно склонировать
+      var originalBlock = document.getElementById("new_set");
+    
+      // Показать скрытый блок
+      originalBlock.classList.remove('hidden_set');
+    
+      // Клонировать блок
+      var clonedBlock = originalBlock.cloneNode(true);
+    
+      // Скрыть оригинальный блок после клонирования
+      originalBlock.classList.add('hidden');
+      clonedBlock.classList.add('show_set');
+    
+      // Добавить клонированный блок после оригинала
+      classesArray_show.parentNode.appendChild(clonedBlock);
 
-  // Находим блок, который нужно скопировать
-  var originalBlock = parentBlock.querySelector('.hidden_set');
-
-  // Клонируем блок
-  var clonedBlock = originalBlock.cloneNode(true);
-  
-  // Добавляем клона в родительский блок
-  parentBlock.appendChild(clonedBlock);
+  } else {
+      console.log("Класс .container не найден");
+  }
 }
+
 
 
 let button_exercise = document.querySelector('.new_exercise_button');
