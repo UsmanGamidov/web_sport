@@ -3,31 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="proba.css">
     <title>Document</title>
 </head>
 <body>
-    <script>
-        function my_func(button) {
-            var container = button.closest('.container');
-            if(container) {
-                // Получение всех классов блока container
-                var classes = container.classList;
-                // Преобразование классов в массив
-                var classesArray = Array.from(classes);
-                // Вывод классов в консоль
-                console.log(classesArray);
-            } else {
-                console.log("Класс .container не найден");
-            }
-        }
-
-    </script>
-
-    <div class="container nenene">
-        <div class="hint">
-               <button onclick="my_func(this)"> кнопка</button>
+    <div class="container">
+        <div class="block">
+          <!-- Кнопка для создания нового блока -->
+          <button class="add-block-btn">Добавить блок</button>
+          <!-- Здесь будет содержимое блока -->
+          <div class="content">
+            <!-- Ваш шаблон блока -->
+            <p>Это ваш блок</p>
+            <button class="add-new-block-btn">Добавить новый блок</button>
+          </div>
         </div>
-     </div>
-     
+      </div>
+    <script src="proba.js"></script>      
 </body>
 </html>

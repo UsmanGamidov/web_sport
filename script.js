@@ -9,7 +9,7 @@ function cloneBlock() {
   blockCount++;
   // Найти скрытый блок, который нужно склонировать
   var originalBlock = document.getElementById('container');
-
+  
   // Показать скрытый блок
   originalBlock.classList.remove('hidden');
 
@@ -49,8 +49,9 @@ function clone_new_set(button) {
       var classes = container.classList;
       // Преобразование классов в массив
       var classesArray = Array.from(classes);
+
       // Беру нужный класс
-      var classesArray_show = classesArray[1];
+      var classesArray_show = document.querySelector("." + classesArray[1]);
 
       // Найти скрытый блок, который нужно склонировать
       var originalBlock = document.getElementById("new_set");
